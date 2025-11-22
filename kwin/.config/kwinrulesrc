@@ -1,3 +1,9 @@
+[5320a85a-e4c7-47e5-a311-ac653801aecc]
+Description=Start window in main screen
+ignoregeometry=true
+ignoregeometryrule=3
+types=417
+
 [990127d5-582a-4ff9-959d-7193aef2abd6]
 Description=Window settings for org.kde.konsole
 shortcut=Alt+K
@@ -9,5 +15,5 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=1
-rules=990127d5-582a-4ff9-959d-7193aef2abd6
+count=2
+rules=990127d5-582a-4ff9-959d-7193aef2abd6,5320a85a-e4c7-47e5-a311-ac653801aecc
