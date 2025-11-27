@@ -14,6 +14,7 @@ alias ip='ip --color=auto'
 alias gitroot='cd "$(git rev-parse --show-toplevel)"'
 alias lrs='systemctl list-units --type=service --state=running'
 alias lrsu='systemctl list-units --type=service --state=running --user'
+alias rs='exec $SHELL'
 
 PS1='[\u@\h \W]\$ '
 
