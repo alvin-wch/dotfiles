@@ -15,6 +15,8 @@ alias gitroot='cd "$(git rev-parse --show-toplevel)"'
 alias lrs='systemctl list-units --type=service --state=running'
 alias lrsu='systemctl list-units --type=service --state=running --user'
 alias rs='exec $SHELL'
+alias radbus_on='sudo ip link set can0 type can bitrate 250000 dbitrate 1000000 fd on && sudo ip link set can0 up'
+alias radbus_off='sudo ip link set can0 down'
 
 PS1='[\u@\h \W]\$ '
 
