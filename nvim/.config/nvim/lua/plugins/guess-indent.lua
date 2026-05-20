@@ -1,6 +1,4 @@
-return {
-  {
-    'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
-    opts = {},
-  },
-}
+require 'plugins.helper'
+
+vim.pack.add { gh 'NMAC427/guess-indent.nvim' }
+require('guess-indent').setup {}
