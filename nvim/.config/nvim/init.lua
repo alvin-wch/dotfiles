@@ -85,6 +85,7 @@ require 'plugins.lspconfig'
 require 'plugins.formatting'
 require 'plugins.autocomplete-snippet'
 require 'plugins.treesitter'
+require 'plugins.obsidian'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
