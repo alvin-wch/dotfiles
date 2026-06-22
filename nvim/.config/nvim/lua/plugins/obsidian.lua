@@ -9,8 +9,16 @@ require('obsidian').setup {
   legacy_commands = false, -- this will be removed in 4.0.0
   workspaces = {
     {
+      name = 'root',
+      path = '/mnt/SharedData/myFiles/Obsidian/',
+    },
+    {
+      name = 'personal',
+      path = '/mnt/SharedData/myFiles/Obsidian/myVault/',
+    },
+    {
       name = 'work',
-      path = '~/obsidian-vault/',
+      path = '/mnt/SharedData/myFiles/Obsidian/workVault/',
     },
   },
 }
