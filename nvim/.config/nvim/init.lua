@@ -73,7 +73,6 @@ do
 end
 
 require 'plugins.guess-indent'
-require 'plugins.nvim-web-devicons'
 require 'plugins.gitsigns'
 require 'plugins.which-key'
 require 'plugins.kanagawa'
