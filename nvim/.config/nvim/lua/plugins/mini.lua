@@ -32,6 +32,13 @@ require('mini.ai').setup {
 -- - sr)'  - [S]urround [R]eplace [)] [']
 require('mini.surround').setup()
 
+-- Navigate and manipulate file system
+require('mini.files').setup()
+local mf = require 'mini.files'
+vim.keymap.set('n', '<leader>mf', function()
+  mf.open(vim.api.nvim_buf_get_name(0))
+end, { desc = '[M]ini [F]iles' })
+
 -- Simple and easy statusline.
 --  You could remove this setup call if you don't like it,
 --  and try some other statusline plugin
