@@ -13,5 +13,6 @@ require('which-key').setup {
     { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } }, -- Enable gitsigns recommended keymaps first
     { 'gr', group = 'LSP Actions', mode = { 'n' } },
     { '<leader>m', group = '[M]ini' },
+    { '<leader>r', group = '[R]un' },
   },
 }
