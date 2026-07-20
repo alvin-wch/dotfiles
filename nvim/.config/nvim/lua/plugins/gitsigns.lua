@@ -11,4 +11,8 @@ require('gitsigns').setup {
     topdelete = { text = '‾' }, ---@diagnostic disable-line: missing-fields
     changedelete = { text = '~' }, ---@diagnostic disable-line: missing-fields
   },
+  current_line_blame = false,
+  current_line_blame_opts = {
+    delay = 400,
+  },
 }
