@@ -18,6 +18,11 @@ alias rs='exec $SHELL'
 alias radbus_on='sudo ip link set can0 type can bitrate 250000 dbitrate 1000000 fd on && sudo ip link set can0 up'
 alias radbus_off='sudo ip link set can0 down'
 
+# Shell functions
+reboot-windows() {
+    sudo grub-reboot "$(sudo grep -i windows /boot/grub/grub.cfg | cut -d "'" -f2)" && sudo reboot now
+}
+
 PS1='[\u@\h \W]\$ '
 
 # Automatically search the official repositories when entering unrecognized command (requires 'pkgfile' package)
