@@ -16,6 +16,11 @@ alias lrs='systemctl list-units --type=service --state=running'
 alias lrsu='systemctl list-units --type=service --state=running --user'
 alias rs='exec $SHELL'
 
+# Shell functions
+reboot-windows() {
+    sudo grub-reboot "$(sudo grep -i windows /boot/grub/grub.cfg | cut -d "'" -f2)" && sudo reboot now
+}
+
 PS1='[\u@\h \W]\$ '
 
 # Automatically search the official repositories when entering unrecognized command (requires 'pkgfile' package)
