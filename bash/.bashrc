@@ -21,6 +21,10 @@ reboot-windows() {
     sudo grub-reboot "$(sudo grep -i windows /boot/grub/grub.cfg | cut -d "'" -f2)" && sudo reboot now
 }
 
+update-spotify() {
+    export LC_ALL=en_US.UTF-8 && spotify-launcher
+}
+
 PS1='[\u@\h \W]\$ '
 
 # Automatically search the official repositories when entering unrecognized command (requires 'pkgfile' package)
