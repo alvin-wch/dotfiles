@@ -74,5 +74,7 @@
   <Action name="focus-view-below" shortcut="Ctrl+Shift+Down; Ctrl+Shift+J"/>
   <Action name="focus-view-left" shortcut="Ctrl+Shift+Left; Ctrl+Shift+H"/>
   <Action name="focus-view-right" shortcut="Ctrl+Shift+Right; Ctrl+Shift+L"/>
+  <Action name="previous-tab" shortcut="Shift+Left; Alt+H"/>
+  <Action name="next-tab" shortcut="Shift+Right; Alt+L"/>
  </ActionProperties>
 </gui>
