@@ -11,6 +11,19 @@ vim.keymap.set('n', '<leader>rb', function()
   end)
 end, { desc = '[R]un [B]uild' })
 
+vim.keymap.set('n', '<leader>rd', function()
+  local yaml = vim.fn.system "yq -r '.product[].define' ~/rad/code/control-system/radbus.yml"
+  local items = vim.split(vim.trim(yaml), '\n')
+
+  vim.ui.select(items, {
+    prompt = 'Select Product',
+  }, function(choice)
+    if choice then
+      vim.cmd(':vsplit | term python ~/rad/code/control-system/build.py ' .. vim.fn.shellescape(choice) .. ' --debug')
+    end
+  end)
+end, { desc = '[R]un Build [D]ebug' })
+
 vim.keymap.set('n', '<leader>rf', function()
   local yaml = vim.fn.system "yq -r '.product[].define' ~/rad/code/control-system/radbus.yml"
   local items = vim.split(vim.trim(yaml), '\n')
@@ -33,5 +46,5 @@ vim.keymap.set('n', '<leader>rc', function()
 end, { desc = '[R]un [C]lean' })
 
 vim.keymap.set('n', '<leader>ru', function()
-  vim.cmd '!python ~/scripts/control-system/update-clangd.py'
+  vim.cmd '!python ~/scripts/control-system/update-clangd.py && python ~/rad/code/control-system/.vscode/configure.py'
 end, { desc = '[R]un [U]pdate clangd' })
