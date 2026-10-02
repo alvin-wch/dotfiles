@@ -1,3 +1,6 @@
+[Appearance]
+WordModeCoding=false
+
 [General]
 Name=myProfile
 Parent=FALLBACK/
