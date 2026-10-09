@@ -35,7 +35,7 @@ vim.keymap.set('n', '<leader>rf', function()
       vim.cmd(
         ':vsplit | term python ~/rad/code/control-system/build.py '
           .. vim.fn.shellescape(choice)
-          .. '&& /opt/st/stm32cubeide_2.1.0/plugins/com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.linux64_2.2.400.202601091506/tools/bin/STM32_Programmer_CLI --connect port=swd --optionbytes BFB2=0 --download Build/main.bin 0x08000000 --verify --rst --start'
+          .. '&& /opt/st/stm32cubeide_2.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.linux64_2.2.500.202603051304/tools/bin/STM32_Programmer_CLI --connect port=swd --optionbytes BFB2=0 --download Build/main.bin 0x08000000 --verify --rst --start'
       )
     end
   end)
